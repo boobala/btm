@@ -1,0 +1,6 @@
+<h3>{{title}}</h3>
+<ul>
+  {{#each item in model}}
+  <li><a {{action "goToList" item}}>{{item}}</a></li>
+  {{/each}}
+</ul>
