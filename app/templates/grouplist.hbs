@@ -1,6 +1,9 @@
-<h3>{{title}}</h3>
+{{partial "submenu"}}
+<div class="common-container">
+<h3 class="common-header"><span>{{title}} <i {{bind-attr class="iconName"}}></i></span></h3>
 <ul>
   {{#each item in model}}
   <li><a {{action "goToList" item}}>{{item}}</a></li>
   {{/each}}
 </ul>
+</div>

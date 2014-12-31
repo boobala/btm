@@ -1,28 +1,31 @@
-<h3>{{title}}</h3>
+{{partial "submenu"}}
+<div class="common-container">
+  <h3 class="common-header"><span>{{title}} <i class="icon-books"></i></span></h3>
 
-{{#if model}}
-<table>
-  <thead>
-    <th>Book Name</th>
-    <th>Author Name</th>
-    <th>Publication Name</th>
-    <th>Description</th>
-    <th>Bought date</th>
-    <th>Language</th>
-  </thead>
-  <tbody>
-    {{#each model}}
-    <tr {{action "bookDetails" book_id}}>
-      <td>{{book_name}} {{#if is_favourite}}*{{/if}}</td>
-      <td>{{author_name}}</td>
-      <td>{{pub_name}}</td>
-      <td>{{description}}</td>
-      <td>{{bought_date}}</td>
-      <td>{{language}}</td>
-    </tr>
-    {{/each}}
-  </tbody>
-</table>
-{{else}}
-No Books Found
-{{/if}}
+  {{#if model}}
+  <table>
+    <thead>
+      <th>Book Name</th>
+      <th>Author Name</th>
+      <th>Publication Name</th>
+      <th>Description</th>
+      <th>Bought date</th>
+      <th>Language</th>
+    </thead>
+    <tbody>
+      {{#each model}}
+      <tr {{action "bookDetails" book_id}}>
+        <td>{{book_name}} {{#if is_favourite}}*{{/if}}</td>
+        <td>{{author_name}}</td>
+        <td>{{pub_name}}</td>
+        <td>{{description}}</td>
+        <td>{{bought_date}}</td>
+        <td>{{language}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{else}}
+  No Books Found
+  {{/if}}
+</div>

@@ -7,7 +7,10 @@ export default Ember.Route.extend({
   },
   controllerName: "Ember.ArrayController",
   setupController: function(controller, context) {
-    controller.set("title", "Authors List");
+    controller.setProperties({
+      "title": "Authors List",
+      "iconName": "icon-users"
+    });
     this._super(controller, context);
   },
   renderTemplate: function() {

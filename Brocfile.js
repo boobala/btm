@@ -2,10 +2,27 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
+var app = new EmberApp({
+});
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
+
+app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+app.import('vendor/styles/icomoon.css');
+app.import('vendor/styles/fonts/icomoon.eot', {
+   destDir: 'assets'
+});
+app.import('vendor/styles/fonts/icomoon.ttf', {
+   destDir: 'assets'
+});
+app.import('vendor/styles/fonts/icomoon.woff', {
+   destDir: 'assets'
+});
+app.import('vendor/styles/fonts/icomoon.svg', {
+   destDir: 'assets'
+});
 //
 // If you need to use different assets in different
 // environments, specify an object as the first parameter. That

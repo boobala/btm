@@ -1,33 +1,42 @@
-<h3>Add new Books</h3>
-<form>
-  <div class="form-group">
-    <label>Book Name</label>
-    {{input value=book_name}}
+{{partial "submenu"}}
+<div class="common-container">
+  <h3 class="common-header"><span>Add new Books <i class="icon-book"></i></span></h3>
+  <div class="row">
+    <form class="form-horizontal col-md-6">
+      <div class="form-group">
+        <label class="control-label col-md-4">Book Name</label>
+        <div class="col-md-6">{{input class="form-control" value=book_name}}</div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-4">Author Name</label>
+        <div class="col-md-6">{{input class="form-control" value=author_name}}</div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-4">Publication Name</label>
+        <div class="col-md-6">{{input class="form-control" value=pub_name}}</div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-4">Bought Date</label>
+        <div class="col-md-6">{{input class="form-control" value=bought_date}}</div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-4">Description</label>
+        <div class="col-md-6">{{input class="form-control" value=description}}</div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-4">Is Favourite?</label>
+        <div class="col-md-6"><label class="checkbox">{{input type="checkbox" name="is_favourite"}} Yes</label></div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-md-4">Holders Name</label>
+        <div class="col-md-6">{{input class="form-control" value=holder_name}}</div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-offset-4 col-md-6">
+          <button type="submit" class="btn btn-primary" {{action "saveRecord"}}>Submit</button>
+          <button type="button" class="btn btn-default" {{action "goBack"}}>Cancel</button>
+        </div>
+      </div>
+    </form>
   </div>
-  <div class="form-group">
-    <label>Author Name</label>
-    {{input value=author_name}}
-  </div>
-  <div class="form-group">
-    <label>Publication Name</label>
-    {{input value=pub_name}}
-  </div>
-  <div class="form-group">
-    <label>Bought Date</label>
-    {{input value=bought_date}}
-  </div>
-  <div class="form-group">
-    <label>Description</label>
-    {{input value=description}}
-  </div>
-  <div class="form-group">
-    <label>Is Favourite?</label>
-    {{input type="checkbox" name="is_favourite"}} Yes
-  </div>
-  <div class="form-group">
-    <label>Holders Name</label>
-    {{input value=holder_name}}
-  </div>
-  <button type="submit" {{action "saveRecord"}}>Submit</button>
-  <button type="button" {{action "goBack"}}>Cancel</button>
-</form>
+</div>

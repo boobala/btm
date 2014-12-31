@@ -1,0 +1,104 @@
+body {
+  font-family: adelle-sans, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 300;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+}
+
+//Dashboard
+header {
+  color: #7D1935;
+  font-size: 30px;
+  padding-top: 30px;
+}
+
+.main-page {
+  padding-top: 30px;
+  ul {
+    li {
+      width: 33.33%;
+      float: left;
+      height: 300px;
+      padding: 80px;
+      text-align: center;
+      background-color: #7D1935;
+      opacity: 0.2;
+      cursor: pointer;
+      font-size: 40px;
+      line-height: 53px;
+      color: #fff;
+      
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+//Sub Menu
+.sub-menu {
+  width: 180px;
+  margin: 0 auto;
+  .item {
+    width: 20px;
+    float: left;
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    a {
+      color: #7D1935;
+      opacity: 0.2;
+      text-decoration: none;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+//Common Container 
+.common-header {
+  span{
+     background-color: #7D1935;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 50px;
+    margin-left: -30px; 
+    
+    i {
+      font-size: 14px;
+      margin-left: 10px;
+    }
+  }
+  margin-bottom: 40px;
+}
+.common-container {
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-bottom: 100px;
+}
+
+//Add Book
+
+label {
+  font-weight: 300;
+}
+
+.btn {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.btn-primary {
+  background-color: #7D1935;
+  border-color: #7D1935;
+  
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken(#7D1935, 8%);
+        border-color: darken(#7D1935, 12%);
+  }
+}
