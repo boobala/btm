@@ -1,3 +1,5 @@
+@themeColor: #7D1935;
+
 body {
   font-family: adelle-sans, 'Helvetica Neue', Arial, sans-serif;
   font-weight: 300;
@@ -8,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 
 //Dashboard
 header {
-  color: #7D1935;
+  color: @themeColor;
   font-size: 30px;
   padding-top: 30px;
 }
@@ -22,12 +24,16 @@ header {
       height: 300px;
       padding: 80px;
       text-align: center;
-      background-color: #7D1935;
+      background-color: @themeColor;
       opacity: 0.2;
       cursor: pointer;
       font-size: 40px;
       line-height: 53px;
       color: #fff;
+      
+      p {
+        font-size: 15px;
+      }
       
       &:hover {
         opacity: 1;
@@ -37,6 +43,18 @@ header {
 }
 
 //Sub Menu
+
+.back {
+  float: left;
+  font-size: 20px;
+  cursor:pointer;
+  a {
+    color: @themeColor;
+    &:hover {
+     text-decoration: none; 
+    }
+  }
+}
 .sub-menu {
   width: 180px;
   margin: 0 auto;
@@ -47,7 +65,7 @@ header {
     font-size: 18px;
     font-weight: 300;
     a {
-      color: #7D1935;
+      color: @themeColor;
       opacity: 0.2;
       text-decoration: none;
       &:hover {
@@ -60,7 +78,7 @@ header {
 //Common Container 
 .common-header {
   span{
-     background-color: #7D1935;
+     background-color: @themeColor;
     color: #fff;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -92,13 +110,67 @@ label {
   padding-right: 20px;
 }
 .btn-primary {
-  background-color: #7D1935;
-  border-color: #7D1935;
+  background-color: @themeColor;
+  border-color: @themeColor;
   
   &:hover,
   &:focus,
   &:active {
-    background-color: darken(#7D1935, 8%);
-        border-color: darken(#7D1935, 12%);
+    background-color: darken(@themeColor, 8%);
+        border-color: darken(@themeColor, 12%);
+  }
+}
+
+//Books List
+.table.bookslist {
+  border-bottom: 1px solid lighten(@themeColor, 65%);  
+  > thead > tr > th {
+    color: darken(@themeColor, 12%);
+    border-bottom: 2px solid @themeColor;
+    font-weight: 400;
+  }
+  > tbody > tr > td {
+    border-top: 1px solid lighten(@themeColor, 65%);
+  }
+  &.table-hover > tbody > tr:hover > td {
+    background-color: lighten(@themeColor, 70%);
+    cursor: pointer;
+  }
+  .icon-heart {
+    font-size: 12px;
+    color: lighten(@themeColor, 30%);
+  }
+}
+.emptylist {
+  margin: 200px auto 100px auto;
+  width: 300px;
+  color: @themeColor;
+  .icon-sad {
+    margin-right: 30px;
+  }
+}
+
+//Group List
+.group-list {
+  width: 500px;
+  li {
+    width: 150px;
+    float: left;
+    height: 150px;
+    padding-top: 60px;
+    text-align: center;
+    background-color: lighten(@themeColor, 60%);
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+    border-radius: 150px;
+    margin-right: 30px;
+    transition-property: font-size;
+    transition-duration: 0.5s;
+    transition-timing-function: linear; 
+    
+    &:hover {
+      font-size: 22px;
+    }
   }
 }

@@ -1,9 +1,9 @@
 {{partial "submenu"}}
 <div class="common-container">
 <h3 class="common-header"><span>{{title}} <i {{bind-attr class="iconName"}}></i></span></h3>
-<ul>
+<ul class="group-list list-unstyled">
   {{#each item in model}}
-  <li><a {{action "goToList" item}}>{{item}}</a></li>
+  <li {{action "goToList" item}}>{{item}}</li>
   {{/each}}
 </ul>
 </div>

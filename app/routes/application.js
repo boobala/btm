@@ -12,6 +12,9 @@ export default Ember.Route.extend({
   actions: {
     bookDetails: function(book_id) {
       this.transitionTo("bookdetails", {'book_id': book_id});
+    },
+    goBack: function () {
+      window.history.back();
     }
   }
 });

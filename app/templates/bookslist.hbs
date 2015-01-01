@@ -3,7 +3,7 @@
   <h3 class="common-header"><span>{{title}} <i class="icon-books"></i></span></h3>
 
   {{#if model}}
-  <table>
+  <table class="table table-hover bookslist">
     <thead>
       <th>Book Name</th>
       <th>Author Name</th>
@@ -11,21 +11,27 @@
       <th>Description</th>
       <th>Bought date</th>
       <th>Language</th>
+      <th></th>
     </thead>
     <tbody>
       {{#each model}}
-      <tr {{action "bookDetails" book_id}}>
-        <td>{{book_name}} {{#if is_favourite}}*{{/if}}</td>
+      <tr {{action "bookDetails" book_id}} class="cursor-pointer">
+        <td>{{book_name}}</td>
         <td>{{author_name}}</td>
         <td>{{pub_name}}</td>
         <td>{{description}}</td>
         <td>{{bought_date}}</td>
         <td>{{language}}</td>
+        <td>
+          {{#if is_favourite}}<i class="icon-heart"></i>{{/if}}
+        </td>
       </tr>
       {{/each}}
     </tbody>
   </table>
   {{else}}
-  No Books Found
+  <div class="emptylist">
+    <h3><i class="icon-sad"></i> No Books Found</h3>
+  </div>
   {{/if}}
 </div>
