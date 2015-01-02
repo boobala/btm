@@ -1,8 +1,11 @@
 # Btm
 
-This README outlines the details of collaborating on this Ember application.
+BTM - Books Treasure Management
 
-A short introduction of this app could easily go here.
+This application is used to manage the books holded by me. It allows you to add book,
+list all books, publishers and authors, filter by authors, publishers, favourites and out of stock books.
+
+It is a simple site, currently front end works are completed. Back end works are yet to be started.
 
 ## Prerequisites
 
