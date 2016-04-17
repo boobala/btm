@@ -1,6 +1,6 @@
 {{partial "submenu"}}
 <div class="common-container">
-  <h3 class="common-header"><span>{{title}} <i class="icon-books"></i></span></h3>
+  <h3 class="common-header"><span>{{title}} {{inline-svg "books" class="icon"}}</span></h3>
 
   {{#if model}}
   <table class="table table-hover bookslist">
@@ -23,7 +23,7 @@
         <td>{{bought_date}}</td>
         <td>{{language}}</td>
         <td>
-          {{#if is_favourite}}<i class="icon-heart"></i>{{/if}}
+          {{#if is_favourite}}{{inline-svg "heart" class="icon"}}{{/if}}
         </td>
       </tr>
       {{/each}}
@@ -31,7 +31,7 @@
   </table>
   {{else}}
   <div class="emptylist">
-    <h3><i class="icon-sad"></i> No Books Found</h3>
+    <h3>{{inline-svg "sad" class="icon"}} No Books Found</h3>
   </div>
   {{/if}}
 </div>

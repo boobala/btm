@@ -9,7 +9,7 @@ export default Ember.Route.extend({
   setupController: function(controller, context) {
     controller.setProperties({
       "title": "Authors List",
-      "iconName": "icon-users"
+      "iconName": "users"
     });
     this._super(controller, context);
   },

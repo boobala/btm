@@ -1,6 +1,6 @@
 {{partial "submenu"}}
 <div class="common-container">
-<h3 class="common-header"><span>{{title}} <i {{bind-attr class="iconName"}}></i></span></h3>
+<h3 class="common-header"><span>{{title}} {{inline-svg iconName class="icon"}}</span></h3>
 <ul class="group-list list-unstyled">
   {{#each item in model}}
   <li {{action "goToList" item}}>{{item}}</li>

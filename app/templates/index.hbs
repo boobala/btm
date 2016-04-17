@@ -1,29 +1,29 @@
 <div class="main-page">
-  <div class="container"> 
+  <div class="container">
     <ul class="list-unstyled">
       {{#link-to "bookslist" tagName="li"}}
         All Books
-        <p><i class="icon-books"></i></p>
+        <p>{{inline-svg "books" class="icon"}}</p>
       {{/link-to}}
       {{#link-to "addbook" tagName="li"}}
         Add Book
-        <p><i class="icon-pencil"></i></p>
+        <p>{{inline-svg "pencil" class="icon"}}</p>
       {{/link-to}}
       {{#link-to "authorslist" tagName="li"}}
         Books by Author
-        <p><i class="icon-users"></i></p>
+        <p>{{inline-svg "users" class="icon"}}</p>
       {{/link-to}}
       {{#link-to "publist" tagName="li"}}
         Books by Publication
-        <p><i class="icon-office"></i></p>
+        <p>{{inline-svg "office" class="icon"}}</p>
       {{/link-to}}
       {{#link-to "favouritebooks" tagName="li"}}
         Favourite Books
-        <p><i class="icon-heart"></i></p>
+        <p>{{inline-svg "heart" class="icon"}}</p>
       {{/link-to}}
       {{#link-to "outofstock" tagName="li"}}
         Books (Out of Stock)
-        <p><i class="icon-books"></i></p>
+        <p>{{inline-svg "books" class="icon"}}</p>
       {{/link-to}}
     </ul>
   </div>

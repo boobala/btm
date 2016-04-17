@@ -19,6 +19,11 @@ module.exports = function(defaults) {
         css: '/assets/vendor.css',
         js: '/assets/vendor.js'
       }
+    },
+    svg: {
+      paths: [
+        'public/images/svgs'
+      ]
     }
   });
   app.import('bower_components/bootstrap/dist/css/bootstrap.css');
