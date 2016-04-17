@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'btm',
+    podModulePrefix: 'btm/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
